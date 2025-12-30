@@ -6,7 +6,7 @@ export default function AdminDashboard() {
 
   const fetchTeachers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/teachers");
+      const res = await axios.get("https://ghts-zpwe.vercel.app/api/admin/teachers");
       setTeachers(res.data);
     } catch (err) {
       console.error("Failed to fetch teachers:", err);
@@ -16,7 +16,7 @@ export default function AdminDashboard() {
   const updateStatus = async (id, status) => {
     try {
       await axios.patch(
-        `http://localhost:5000/api/admin/teachers/${id}/status`,
+        `https://ghts-zpwe.vercel.app/api/admin/teachers/${id}/status`,
         { status }
       );
       fetchTeachers();
@@ -77,7 +77,7 @@ export default function AdminDashboard() {
                 <td className="border border-black p-2 text-center">
                   {t.photo ? (
                     <a
-                      href={`http://localhost:5000/${t.photo}`}
+                      href={`https://ghts-zpwe.vercel.app/${t.photo}`}
                       target="_blank"
                       className="text-green-700 underline"
                     >
@@ -106,7 +106,7 @@ export default function AdminDashboard() {
                 <td className="border border-black p-2 text-center space-y-1">
                   {t.resume && (
                     <a
-                      href={`http://localhost:5000/${t.resume}`}
+                      href={`https://ghts-zpwe.vercel.app/${t.resume}`}
                       target="_blank"
                       className="block underline text-green-700"
                     >
@@ -116,7 +116,7 @@ export default function AdminDashboard() {
                   {t.documents?.map((doc, idx) => (
                     <a
                       key={idx}
-                      href={`http://localhost:5000/${doc}`}
+                      href={`https://ghts-zpwe.vercel.app/${doc}`}
                       target="_blank"
                       className="block underline text-green-700"
                     >

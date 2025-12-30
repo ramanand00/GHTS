@@ -19,7 +19,7 @@ export default function TeacherRegister() {
     const formData = new FormData(e.target);
 
     try {
-      await axios.post("http://localhost:5000/api/teachers/register", formData);
+      await axios.post("https://ghts-zpwe.vercel.app/api/teachers/register", formData);
       alert("Application submitted successfully!");
       e.target.reset();
       setAccepted(false);
