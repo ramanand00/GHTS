@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import TermsModal from "../components/TermsModal";
+import logo from "../assets/logo.jpg";
+
 
 export default function TeacherRegister() {
   const [showTerms, setShowTerms] = useState(false);
@@ -35,15 +37,12 @@ export default function TeacherRegister() {
             {/* Logo Section */}
             <div className="md:w-1/4 bg-gradient-to-br from-emerald-700 to-emerald-900 p-8 flex flex-col items-center justify-center">
               <div className="bg-white p-6 rounded-xl shadow-lg mb-6">
-                <img 
-                  src="/assets/logo.jpg" // Try different paths if this doesn't work
-                  alt="Gravity Home Tuition Logo" 
-                  className="w-40 h-40 object-contain"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = "https://via.placeholder.com/160x160/059669/ffffff?text=Gravity+Logo";
-                  }}
-                />
+                <img
+  src={logo}
+  alt="Gravity Home Tuition Logo"
+  className="w-40 h-40 object-contain"
+/>
+
               </div>
               <h2 className="text-white text-center font-bold text-xl tracking-wide">Gravity Home Tuition</h2>
               <p className="text-emerald-100 text-sm mt-2 text-center">Quality Education at Home</p>
