@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import TermsModal from "../components/TermsModal";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 
 
 export default function TeacherRegister() {
